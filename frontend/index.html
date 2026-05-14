@@ -1099,7 +1099,9 @@
 <script>
 const { createApp, ref, computed } = Vue;
 
-const API = 'http://localhost:8000';
+const API = window.location.hostname === 'cursoor.vercel.app'
+  ? 'https://cursoor.onrender.com'
+  : 'http://localhost:8000';
 
 createApp({
   setup() {
